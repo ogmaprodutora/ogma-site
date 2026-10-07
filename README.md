@@ -7,3 +7,8 @@ Site institucional da OGMA Produtora Audiovisual: https://ogmaprodutora.com
 
 ## Publicar
 HostGator → cPanel → Gerenciador de arquivos → `public_html` → Carregar `index.html`.
+
+## Publicação automática
+Todo push na branch `main` publica o site na HostGator via FTP (`.github/workflows/deploy.yml`).
+Secrets necessários no GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
+A conta FTP deve ter como diretório a pasta `public_html`.
